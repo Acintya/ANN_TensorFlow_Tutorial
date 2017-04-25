@@ -24,7 +24,7 @@ xs = tf.placeholder(tf.float32, [None, 1])
 ys = tf.placeholder(tf.float32, [None, 1])
 
 # 3. define hidden layer and output layer
-# add hidden layer: input xs£¬10 neuro
+# add hidden layer: input xsï¼Œ10 neuro
 l1 = add_layer(xs, 1, 10, activation_function=tf.nn.relu)
 # add output layer
 prediction = add_layer(l1, 10, 1, activation_function=None)
@@ -45,9 +45,9 @@ sess = tf.Session()
 # run caculation with sess.run
 sess.run(init)
 
-# iteration for 1000 times£¬sess.run optimizer
+# iteration for 1000 timesï¼Œsess.run optimizer
 for i in range(1000):
-    # since training train_step and loss function are defined by placeholder £¬pass variables with feed
+    # since training train_step and loss function are defined by placeholder ï¼Œpass variables with feed
     sess.run(train_step, feed_dict={xs: x_data, ys: y_data})
     # print result for every 50 steps to see the step improvement
     if i % 50 == 0:

@@ -3,7 +3,7 @@ import tensorflow as tf
 
 def add_layer(inputs, in_size, out_size, activation_function=None):
     # add one more layer and return the output of this layer
-    # difference£ºname_scope under add_layer
+    # differenceï¼šname_scope under add_layer
     with tf.name_scope('layer'):
         with tf.name_scope('weights'):
             Weights = tf.Variable(tf.random_normal([in_size, out_size]), name='W')
@@ -19,7 +19,7 @@ def add_layer(inputs, in_size, out_size, activation_function=None):
 
 
 # define placeholder for inputs to network
-# inputs x£¬y
+# inputs xï¼Œy
 with tf.name_scope('inputs'):
     xs = tf.placeholder(tf.float32, [None, 1], name='x_input')
     ys = tf.placeholder(tf.float32, [None, 1], name='y_input')
